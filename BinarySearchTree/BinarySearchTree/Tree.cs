@@ -33,22 +33,27 @@ namespace BinarySearchTree
             }
 
         }
-        public void Search(Node node, int data)
+        public bool Search(Node node, int data)
         {
             Node newNode = new Node(data);
 
             if (newNode == null)
             {
-                newNode = new Node(data);
+                return false;
             }
-            else if (newNode.data < data)
+            if (newNode.data == data)
             {
-                Search(node.left, data);
+                return true;
             }
             else if (newNode.data > data)
             {
-                Search(node.right, data);
+               return Search(node.left, data);
             }
+            else if (newNode.data < data)
+            {
+                return Search(node.right, data);
+            }
+            return false;
         }
     }
 }
