@@ -55,6 +55,10 @@ namespace BinarySearchTree
             }
             return false;
         }
+        public void Input(Node node, int data)
+        {
+           
+        }
     }
 }
  

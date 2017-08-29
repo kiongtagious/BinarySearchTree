@@ -12,8 +12,8 @@ namespace BinarySearchTree { }
     {
         Tree newTree = new Tree();
 
-        newTree.Search(10);
-        newTree.display();
+        newTree.Input(10);
+        newTree.Input();
 
         Console.ReadLine();
 
